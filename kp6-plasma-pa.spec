@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.2.5
+%define		kdeplasmaver	6.3.0
 %define		qtver		5.15.2
 %define		kpname		plasma-pa
 
 Summary:	KDE Plasma Pulse Audio
 Name:		kp6-%{kpname}
-Version:	6.2.5
+Version:	6.3.0
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	5e0c5759407e645c3802201c63c2d301
+# Source0-md5:	2eee65bd96d9318919760c0c4d0d39c4
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	cmake >= 3.16.0
@@ -92,3 +92,4 @@ rm -rf $RPM_BUILD_ROOT
 %ghost %{_libdir}/libplasma-volume.so.6
 %attr(755,root,root) %{_libdir}/libplasma-volume.so.*.*
 %attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kded/audioshortcutsservice.so
+%{_datadir}/qlogging-categories6/plasmapa.categories
