@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.4.5
+%define		kdeplasmaver	6.5.0
 %define		qtver		5.15.2
 %define		kpname		plasma-pa
 
 Summary:	KDE Plasma Pulse Audio
 Name:		kp6-%{kpname}
-Version:	6.4.5
-Release:	2
+Version:	6.5.0
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	6fa26064b591cd0acd06cfc983da71f0
+# Source0-md5:	85a3091250cbc11be62dbd303c248fbd
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	cmake >= 3.16.0
@@ -90,12 +90,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/qt6/qml/org/kde/plasma/private/volume/kde-qmlmodule.version
 %{_libdir}/qt6/qml/org/kde/plasma/private/volume/plasma-volume-declarative.qmltypes
 %{_libdir}/qt6/qml/org/kde/plasma/private/volume/PulseObjectFilterModel.qml
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma/applets/org.kde.plasma.volume.so
-%attr(755,root,root) %{_libdir}/qt6/qml/org/kde/plasma/private/volume/libplasma-volume-declarative.so
+%{_libdir}/qt6/plugins/plasma/applets/org.kde.plasma.volume.so
+%{_libdir}/qt6/qml/org/kde/plasma/private/volume/libplasma-volume-declarative.so
 %{_libdir}/qt6/qml/org/kde/plasma/private/volume/qmldir
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_pulseaudio.so
+%{_libdir}/qt6/plugins/plasma/kcms/systemsettings/kcm_pulseaudio.so
 %{_desktopdir}/kcm_pulseaudio.desktop
 %ghost %{_libdir}/libplasma-volume.so.6
-%attr(755,root,root) %{_libdir}/libplasma-volume.so.*.*
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kded/audioshortcutsservice.so
+%{_libdir}/libplasma-volume.so.*.*
+%{_libdir}/qt6/plugins/kf6/kded/audioshortcutsservice.so
 %{_datadir}/qlogging-categories6/plasmapa.categories
