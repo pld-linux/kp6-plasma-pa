@@ -50,7 +50,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		qt6dir		%{_libdir}/qt6
 
 %description
-KDE Plasma Pulse Audio.
+Plasma applet for audio volume management using PulseAudio.
+
+%description -l pl.UTF-8
+Aplet Plazmy do zarządzania głośnością dźwięku przy użyciu PulseAudio.
 
 %prep
 %setup -q -n %{kpname}-%{version}
